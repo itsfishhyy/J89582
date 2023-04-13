@@ -1,4 +1,8 @@
-﻿
+﻿.body {
+    min-height: 100%;
+    margin-bottom: 60px;
+}
+
 .flex-container{
     display: flex;
     flex-wrap: nowrap;
@@ -8,6 +12,9 @@
 }
 
 .left-section-1 {
+    height: 40vw;
+}
+.right-section-1 {
     height: 40vw;
 }
 
@@ -51,8 +58,20 @@
     height: 50px;
     width: 100px;
     float: right;
-    position: relative;
+    position: absolute;
     right: 23vw;
-    bottom: 5vw;
+    bottom: 190px;
     border-radius: 15px;
+    text-align: center;
+}
+
+.order-now {
+    display: block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.middle-section{
+    position: relative;
+    top: 10vh;
 }
