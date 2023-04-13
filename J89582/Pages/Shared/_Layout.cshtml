@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    @RenderSection("head", required: false)
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Burgerorzo</title>
@@ -16,7 +17,7 @@
         <div class="navbar-container">
             <ul>
                 <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Index">Home</a></li>
-                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/menu">Menu</a></li>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Menu">Menu</a></li>
                 <li class="nav-item"><a class="navbar" asp-area="" asp-page="/about">About</a></li>
                 <li class="nav-item"><a class="navbar" asp-area="" asp-page="/contact">Contact</a></li>
             </ul>
@@ -24,12 +25,12 @@
     </header>
     <div class="container-body">
         <main role="main" class="pb-3">
-            <img class="background-img" src="img\background.png" />
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
+        @RenderSection("footer", required: false)
         <div class="container">
             &copy; 2023 - burgerorzo 
             <a class="link-footer" asp-area="" asp-page="/Privacy">Privacy</a>

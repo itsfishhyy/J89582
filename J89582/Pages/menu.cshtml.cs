@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace burgerorzo.Pages
+namespace J89582.Pages
 {
-    public class menuModel : PageModel
+    public class MenuModel : PageModel
     {
         public void OnGet()
         {
