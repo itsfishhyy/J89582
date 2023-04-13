@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Burgerorzo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/J89582.styles.css" asp-append-version="true" />
+    <link href="https://fonts.cdnfonts.com/css/cinzel-decorative-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/segoe-script" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="navbar-brand" asp-area="" asp-page="/Index">burgerorzo</a>
+        <div class="navbar-container">
+            <ul>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Index">Home</a></li>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/menu">Menu</a></li>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/about">About</a></li>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container-body">
+        <main role="main" class="pb-3">
+            <img class="background-img" src="img\background.png" />
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - burgerorzo <a class="link-footer" asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="link-footer" href="http://validator.w3.org/check?uri=referer">Validate HTML</a>
+            <a class="link-footer" href="http://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+            <a class="link-footer" asp-page="/Admin">Admin</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

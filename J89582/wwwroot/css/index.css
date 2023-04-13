@@ -1,0 +1,58 @@
+﻿
+.flex-container{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 130px;
+    height: 40vw;
+}
+
+.left-section-1 {
+    height: 40vw;
+}
+
+.head-pic {
+    width: 100%;
+    margin:  20px 20px;
+    padding-top: 25px;
+    height: 35vw;
+    position: relative;
+    top: 2vw;
+    float: left;
+    left: 100px;
+}
+
+.big-text {
+    font-family: 'Big John', sans-serif;
+    font-weight: 700;
+    font-size: 7vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    letter-spacing: 10px;
+    top: 150px;
+    float: right;
+    right: 5vw;
+}
+
+.slogan {
+    color: #dadada;
+    font-family: 'Roboto Condensed Light', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    float : right;
+    right: 5.5vw;
+}
+
+.order-button {
+    background-color: #2b2d42;
+    height: 50px;
+    width: 100px;
+    float: right;
+    position: relative;
+    right: 23vw;
+    bottom: 5vw;
+    border-radius: 15px;
+}
