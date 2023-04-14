@@ -76,10 +76,18 @@
     margin-top: 10px;
 }
 
+.top-menu{
+    margin: 60px 0;
+    padding: 15px 0;
+    background-color: white;
+}
+
 .top-sell {
     margin: 0 auto;
     text-align: center;
     padding-bottom: 50px;
+    margin-bottom: 55px;
+    font-size: 5em;
 }
 
 .image-container {
@@ -98,6 +106,7 @@
     text-align: center;
     font-size: 2.5em;
     width: 40%;
+    font-weight: 600;
 }
 
 .text-container {
