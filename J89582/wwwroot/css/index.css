@@ -79,18 +79,30 @@
 .top-sell {
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
-
-.row-menu {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    align-content: center;
+.image-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
-.column-menu img {
-    align-content: center;
-    width: 50vh;
+.image-container img{
+    width: 30%;
+    padding: 30px;
+    margin: auto 40px;
+}
+
+.text-container p {
+    text-align: center;
+    font-size: 2.5em;
+    width: 40%;
+}
+
+.text-container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
