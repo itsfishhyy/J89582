@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Home page";
 }
+
 <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
 <link href="https://fonts.cdnfonts.com/css/segoe-script" rel="stylesheet">
 <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
@@ -10,28 +11,33 @@
 <link href="https://fonts.cdnfonts.com/css/big-john" rel="stylesheet">
 
 <img class="background-img" src="img\background.png" />
-<div class="body">
 <div class="flex-container">
-    <div class="left-section-1">
+    <div class="left-section-1 flex-content">
         <img class="head-pic" src="img\smashburger.png" />
     </div>
 
-    <div class="right-section-1">
+    <div class="right-section-1 flex-content">
         <h2 class="big-text">HUNGRY?</h2>
         <p class="slogan">
             Time to find out what you've been missing
         </p>
+        <div class="order-button">
+            <a class="order-now" asp-page="/Menu"> Order Now</a>
+        </div>
     </div>
 </div>
 
-<div class="order-button">
-    <a class="order-now" asp-page="/Menu"> Order Now</a>
+<div class="top-sell">
+    <h1> Our Best Selling</h1>
 </div>
 
-<div class="middle-section">
-    <div class="title">
-        Our Best Selling
-    </div>
-    </div>
+<div class="row-menu">
+    <div class="column-menu"><img src="img/chicken-sandwhich.png" class="column-menu"></div>
+    <div class="column-menu"><img src="img/bbq-hamburger.png" class="column-menu"></div>
+    <div class="column-menu"><img src="img/wrap-chicken.png" class="column-menu"></div>
 
-</div>
+    <div class="row-menu">
+        <div class="column-menu-name">Lorem ipsum</div>
+        <div class="column-menu-name">Lorem ipsum</div>
+        <div class="column-menu-name">Lorem ipsum</div>
+    </div>

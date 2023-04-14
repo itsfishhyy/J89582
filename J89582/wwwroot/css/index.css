@@ -1,32 +1,36 @@
-﻿.body {
+﻿body {
     min-height: 100%;
-    margin-bottom: 60px;
 }
 
-.flex-container{
+.background-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.flex-container {
     display: flex;
     flex-wrap: nowrap;
     position: relative;
-    top: 130px;
+    top: 10px;
     height: 40vw;
+    width: 100%;
 }
 
-.left-section-1 {
-    height: 40vw;
-}
-.right-section-1 {
-    height: 40vw;
+.flex-content {
+    width: 100%;
 }
 
 .head-pic {
     width: 100%;
-    margin:  20px 20px;
+    margin: 20px 20px;
     padding-top: 25px;
     height: 35vw;
     position: relative;
     top: 2vw;
     float: left;
-    left: 100px;
 }
 
 .big-text {
@@ -49,18 +53,19 @@
     text-align: center;
     position: relative;
     top: 150px;
-    float : right;
+    float: right;
     right: 5.5vw;
 }
 
+
 .order-button {
     background-color: #2b2d42;
-    height: 50px;
-    width: 100px;
+    height: 3vw;
+    width: 10vw;
     float: right;
     position: absolute;
-    right: 23vw;
-    bottom: 190px;
+    right: 20vw;
+    bottom: 20vh;
     border-radius: 15px;
     text-align: center;
 }
@@ -71,7 +76,21 @@
     margin-top: 10px;
 }
 
-.middle-section{
-    position: relative;
-    top: 10vh;
+.top-sell {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+
+.row-menu {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    align-content: center;
+}
+
+.column-menu img {
+    align-content: center;
+    width: 50vh;
 }
