@@ -42,10 +42,15 @@ button.accept-policy {
 }
 
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     white-space: nowrap;
     line-height: 60px;
     background-color: #D8D8D8;
+}
+
+.link-footer {
+    text-decoration: none;
+    padding: 0px 10px;
+    color: grey;
+    width: 100%;
 }
