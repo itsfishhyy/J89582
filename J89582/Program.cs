@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using J89582.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<J89582Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("J89582Context") ?? throw new InvalidOperationException("Connection string 'J89582Context' not found.")));
 
 var app = builder.Build();
 
