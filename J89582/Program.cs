@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using J89582.Model;
 using J89582.Data;
+using J89582.Pages.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,11 @@ builder.Services.AddDbContext<J89582Context>(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope)
+{
+    var services = scope.ServiceProvider;
+    SeedData.Initialize(services);
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

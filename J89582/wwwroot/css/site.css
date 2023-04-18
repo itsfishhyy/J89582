@@ -76,9 +76,27 @@ a.navbar {
 }
 
 .admin-page {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 70%;
+    height: 100%;
     top: 150px;
+    border: 1px solid black;
     margin-left: auto;
     margin-right: auto;
+}
+
+.upload {
+    position: absolute;
+    top: 20vh;
+    margin: auto;
+    border: 1px solid black;
+    left: 72vh;
+}
+
+.menu {
+    position: absolute;
+    top: 20vh;
+    margin: auto;
+    border: 1px solid black;
+    left: 72vh;
 }
