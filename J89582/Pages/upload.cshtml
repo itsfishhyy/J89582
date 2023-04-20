@@ -1,0 +1,17 @@
+﻿@page
+@model J89582.Pages.uploadModel
+@{
+    ViewData["Title"] = "Upload File";
+}
+
+<section class="upload">
+<div class="text-center">
+    <h1>Upload File</h1>
+</div>
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="UploadedFile" />
+    <input type="submit" />
+</form>
+
+</section>

@@ -100,3 +100,8 @@ a.navbar {
     border: 1px solid black;
     left: 72vh;
 }
+
+.crud a{
+    color: white;
+    text-decoration: none;
+}
