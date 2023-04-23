@@ -93,15 +93,21 @@ a.navbar {
     left: 72vh;
 }
 
-.menu {
+
+.crud a{
+    color: white;
+    text-decoration: none;
+}
+
+.Create {
     position: absolute;
     top: 20vh;
     margin: auto;
     border: 1px solid black;
     left: 72vh;
+    width: 50%;
 }
 
-.crud a{
-    color: white;
-    text-decoration: none;
+.admin-image{
+    width: 20%;
 }
