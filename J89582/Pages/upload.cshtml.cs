@@ -32,6 +32,7 @@ namespace J89582.Pages
             {
                 return;
             }
+
             _logger.LogInformation($"Uplaoding {UploadedFile.FileName}.");
             var id = Request.Query["id"];
             string extension = Path.GetExtension(UploadedFile.FileName);

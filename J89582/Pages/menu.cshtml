@@ -14,10 +14,11 @@
             @foreach (var item in Model.Menu)
             {
                 var imagePath = @"img\" + item.ID + ".png";
-            }
+            
             <td>
                 <img class="admin-image" src="@imagePath">
                 </td>
+            }
         </tr>
 
             <tr>
@@ -27,7 +28,7 @@
             @foreach (var item in Model.Menu)
             {
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.MenuName)
                 </td>
             }
         </tr>

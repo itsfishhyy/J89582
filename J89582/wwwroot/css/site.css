@@ -94,9 +94,13 @@ a.navbar {
 }
 
 
-.crud a{
+.crud a {
     color: white;
     text-decoration: none;
+}
+
+.crud {
+    background-color: #9BA4B5;
 }
 
 .Create {
@@ -110,4 +114,9 @@ a.navbar {
 
 .admin-image{
     width: 20%;
+}
+
+.create-new {
+    color: white;
+    text-decoration: none;
 }
