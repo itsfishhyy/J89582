@@ -5,13 +5,14 @@
     ViewData["Title"] = "Index";
 }
 
-<link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="css/adminPage.css" asp-append-version="true" />
 <section class="admin-page">
 <h1>Index</h1>
 
-<p class="create-new">
+<div class="create-new">
     <a asp-page="Create">Create New</a>
-</p>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -38,13 +39,14 @@
                     var imagePath = @"img\" + item.ID + ".png";
                 }
             </td>
-
+                   
             <td class="crud">
+                        <img class="admin-image" src="@imagePath">
                 <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
                 <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a> |
                 <a asp-page="/upload" asp-route-id="@item.ID">Upload</a>
-                 <img class ="admin-image" src="@imagePath">
+                 
             </td>
         </tr>
 }

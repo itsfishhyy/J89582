@@ -9,7 +9,7 @@ namespace J89582.Data
 {
     public class J89582Context : DbContext
     {
-        public J89582Context (DbContextOptions<J89582Context> options)
+        public J89582Context(DbContextOptions<J89582Context> options)
             : base(options)
         {
         }

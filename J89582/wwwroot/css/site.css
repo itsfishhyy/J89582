@@ -75,16 +75,6 @@ a.navbar {
     text-decoration: none;
 }
 
-.admin-page {
-    position: relative;
-    width: 70%;
-    height: 100%;
-    top: 150px;
-    border: 1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .upload {
     position: absolute;
     top: 20vh;
@@ -116,7 +106,25 @@ a.navbar {
     width: 20%;
 }
 
-.create-new {
-    color: white;
-    text-decoration: none;
+.delete-page {
+    position: absolute;
+    top: 20vh;
+    margin: auto;
+    border: 1px solid black;
+    left: 72vh;
+    width: 50%;
+}
+
+.edit-page {
+    position: absolute;
+    top: 20vh;
+    margin: auto;
+    border: 1px solid black;
+    left: 72vh;
+    width: 50%;
+}
+
+.contactpage{
+    position: relative;
+    top: 20vh;
 }

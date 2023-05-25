@@ -1,4 +1,90 @@
 ﻿@page
+@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @model J89582.Pages.ContactModel
 @{
+    ViewData["Title"] = "Contact Us";
 }
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+<link href="https://fonts.cdnfonts.com/css/segoe-script" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/big-black-bear" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/big-john" rel="stylesheet">
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg' async defer></script>
+<script>
+    function GetMap() {
+        var map = new Microsoft.Maps.Map('#myMap', {});
+        map.setView({
+            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+            center: new Microsoft.Maps.Location(4.887316, 114.93222768452713),
+            zoom: 10
+        });
+
+        var center = map.getCenter();
+    }
+</script>
+    </head>
+
+    <body>
+<section class="contactpage">
+<div class="container">
+    <div class="content"> 
+        <div class="left">
+            <div class="address detail">
+                <i class="bi bi-pin-map-fill"></i>
+                <div class="title">Address</div>
+                <div class="mini">
+                    LOT 16177 Jalan Laksamana Abdul Razak, Bandar Seri Begawan BA1712
+                </div>
+            </div>
+            <div class="number detail">
+                    <i class="bi bi-telephone-fill"></i>
+                <div class="title">Phone</div>
+                <div class="mini">+673 222 6882</div>
+            </div>
+            <div class="email detail">
+                    <i class="bi bi-mailbox2"></i>
+                <div class="title">Email</div>
+            
+                <div class="mini">
+                    burgerorzo@gmail.com
+                </div>
+            </div>
+        </div>
+
+        <div class="middle">
+                <div class="head">Contact Us</div>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="input"><input type="text" placeholder="Name" /> </div>
+                    <div class="input"><input type="text" placeholder="Subject" /> </div>
+                    <div class="input"><input type="text" placeholder="Email" /> </div>
+                    <div class="input message-box">
+                        <textarea></textarea>
+                    </div>
+                    <div class="button">
+                        <input type="button" placeholder="Send" />
+                    </div>
+                </form>
+        </div>
+       
+            <div class="right">
+                    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+               <script>
+                   (async() => {
+                       let script = document.createElement("script");
+                            script.setAttribute("src", 'http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg');
+                        document.body.appendChild(script);
+                   })();
+               </script>
+            </div>
+    </div>
+</div>
+</section>
+</body>
+</html>
