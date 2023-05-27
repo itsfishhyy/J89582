@@ -1,4 +1,4 @@
-﻿@page
+@page
 @addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
 @model J89582.Pages.ContactModel
 @{
@@ -16,22 +16,25 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
-    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg' async defer></script>
-<script>
-    function GetMap() {
-        var map = new Microsoft.Maps.Map('#myMap', {});
-        map.setView({
-            mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-            center: new Microsoft.Maps.Location(4.887316, 114.93222768452713),
-            zoom: 10
-        });
+    <script src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg" async defer></script>
+    <script>
+        function GetMap() {
+            var map = new Microsoft.Maps.Map('#myMap', {});
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(4.887316, 114.93222768452713),
+                zoom: 15
+            });
 
-        var center = map.getCenter();
-    }
-</script>
+            var center = map.getCenter();
+            var pin = new Microsoft.Maps.Pushpin(center, {
+                color: 'red'
+            });
+            map.entities.push(pin);
+        }
+    </script>
     </head>
-
-    <body>
+    <body onload="GetMap()">
 <section class="contactpage">
 <div class="container">
     <div class="content"> 
@@ -72,19 +75,19 @@
                     </div>
                 </form>
         </div>
-       
-            <div class="right">
-                    <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
-               <script>
-                   (async() => {
-                       let script = document.createElement("script");
-                            script.setAttribute("src", 'http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg');
-                        document.body.appendChild(script);
-                   })();
-               </script>
-            </div>
+
+                    <div class="right">
+                        <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+                    </div>
     </div>
 </div>
 </section>
 </body>
 </html>
+              @* <script>
+                   (async() => {
+                       let script = document.createElement("script");
+                            script.setAttribute("src", 'http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ar1wJHxtMy1DXMP_0grovn1yTjKMNjxjXh1V9JNysnI65R83w5V_-B-EcAmohrtg');
+                        document.body.appendChild(script);
+                   })();
+               </script>*@
