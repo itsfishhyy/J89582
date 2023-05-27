@@ -22,7 +22,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = new PathString("/Account/Login");
     options.AccessDeniedPath = new PathString("/Account/AccessDenied");
-    options.LogoutPath = new PathString("/index");
+    options.LogoutPath = new PathString("/Index");
 });
 
 builder.Services.AddAuthorization(options =>

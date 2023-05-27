@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using J89582.Data;
 using J89582.Model;
+using Microsoft.AspNetCore.Authorization;
 
 namespace J89582.Pages.Admin
 {
+
     public class IndexModel : PageModel
     {
         private readonly J89582.Data.J89582Context _context;

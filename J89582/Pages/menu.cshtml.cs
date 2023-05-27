@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using J89582.Data;
 using J89582.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace J89582.Pages
 {
+    [Authorize]
     public class MenuModel : PageModel
     {
         

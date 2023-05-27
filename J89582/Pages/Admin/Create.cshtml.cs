@@ -15,7 +15,6 @@ namespace J89582.Pages.Admin
     public class CreateModel : PageModel
     {
         private readonly J89582.Data.J89582Context _context;
-
         public CreateModel(J89582.Data.J89582Context context)
         {
             _context = context;
