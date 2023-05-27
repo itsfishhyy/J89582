@@ -28,7 +28,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminPolicy",
-    policy => policy.RequireRole("Administrator"));
+    policy => policy.RequireRole("Admin"));
 });
 
 
@@ -61,7 +61,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
