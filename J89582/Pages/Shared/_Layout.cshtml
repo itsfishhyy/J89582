@@ -18,18 +18,18 @@
         <div class="navbar-container">
             <ul>
                 <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Index">Home</a></li>
-                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Menu">Menu</a></li>
+                <li class="nav-item"><a class="navbar" asp-area="" asp-page="/menu">Menu</a></li>
                 <li class="nav-item"><a class="navbar" asp-area="" asp-page="/Contact">Contact</a></li>
             </ul>
         </div>
     </header>
 
-    <section class="container-body">
-        <img class="bg" src="img\background.png" />
+    
         <main role="main" class="pb-3">
+        <img class="bg" src="img\background.png"/>
             @RenderBody()
         </main>
-    </section>
+   
 
     <footer class="footer">
         <div class="container">

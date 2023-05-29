@@ -1,0 +1,13 @@
+﻿body {
+}
+
+.login{
+    position: relative;
+    top: 170px;
+    left: 50px;
+    width: 200px;
+}
+
+button{
+    margin: 10px 0 0 0;
+}

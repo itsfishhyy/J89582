@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace J89582.Pages
 {
-    [Authorize]
+    
     public class MenuModel : PageModel
     {
         

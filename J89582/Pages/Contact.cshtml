@@ -23,7 +23,7 @@
             map.setView({
                 mapTypeId: Microsoft.Maps.MapTypeId.aerial,
                 center: new Microsoft.Maps.Location(4.887316, 114.93222768452713),
-                zoom: 15
+                zoom: 17
             });
 
             var center = map.getCenter();
@@ -46,11 +46,7 @@
                     LOT 16177 Jalan Laksamana Abdul Razak, Bandar Seri Begawan BA1712
                 </div>
             </div>
-            <div class="number detail">
-                    <i class="bi bi-telephone-fill"></i>
-                <div class="title">Phone</div>
-                <div class="mini">+673 222 6882</div>
-            </div>
+           
             <div class="email detail">
                     <i class="bi bi-mailbox2"></i>
                 <div class="title">Email</div>
@@ -68,16 +64,16 @@
                     <div class="input"><input type="text" placeholder="Subject" /> </div>
                     <div class="input"><input type="text" placeholder="Email" /> </div>
                     <div class="input message-box">
-                        <textarea></textarea>
+                        <textarea  placeholder="Message" ></textarea>
                     </div>
                     <div class="button">
-                        <input type="button" placeholder="Send" />
+                            <input type="submit" value="Send" asp-page-handler="Submit" />
                     </div>
                 </form>
         </div>
 
                     <div class="right">
-                        <div id="myMap" style="position:relative;width:600px;height:400px;"></div>
+                        <div id="myMap" class="map"></div>
                     </div>
     </div>
 </div>
