@@ -48,7 +48,7 @@ namespace J89582.Pages.Account
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    Task<IdentityResult> newUserRole = _userManager.AddToRoleAsync(user, "RegisteredUser");
+                    _ = _userManager.AddToRoleAsync(user, "RegisteredUser");
                     return RedirectToPage("/Index");
                 }
                 foreach (var error in result.Errors)
