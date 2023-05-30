@@ -16,6 +16,10 @@ namespace J89582.Data
         }
 
         public DbSet<J89582.Model.Menu> Menu { get; set; } = default!;
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
 
     }
 }
