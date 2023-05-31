@@ -78,9 +78,8 @@ a.navbar {
 .upload {
     position: absolute;
     top: 20vh;
-    margin: auto;
-    border: 1px solid black;
-    left: 72vh;
+    height: 250px;
+    width: 50%;
 }
 
 
@@ -93,15 +92,6 @@ a.navbar {
     background-color: #9BA4B5;
 }
 
-.Create {
-    position: absolute;
-    top: 20vh;
-    margin: auto;
-    border: 1px solid black;
-    left: 72vh;
-    width: 50%;
-}
-
 .admin-image{
     width: 20%;
 }
@@ -109,22 +99,72 @@ a.navbar {
 .delete-page {
     position: absolute;
     top: 20vh;
-    margin: auto;
-    border: 1px solid black;
-    left: 72vh;
+    height: 250px;
     width: 50%;
 }
 
-.edit-page {
+.details  {
     position: absolute;
     top: 20vh;
-    margin: auto;
-    border: 1px solid black;
-    left: 72vh;
+    height: 250px;
     width: 50%;
 }
 
-.contactpage{
-    position: relative;
+.Create {
+    position: absolute;
     top: 20vh;
+    height: 250px;
+    width: 50%;
+}
+
+.Login {
+    background: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    float: right;
+    position: absolute;
+    right: 25px;
+    top:0;
+}
+
+.Login:hover {
+    background: #D3D3D3;
+    cursor: pointer;
+}
+
+.Login a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500
+}
+
+.logout {
+    float: right;
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+button {
+    background: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500
+}
+
+button:hover {
+    background: #D3D3D3;
+    cursor: pointer;
+}
+
+.admin{
+    text-decoration:none;
+    color: white;
 }

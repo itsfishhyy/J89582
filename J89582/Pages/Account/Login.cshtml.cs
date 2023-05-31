@@ -31,7 +31,14 @@ namespace J89582.Pages
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
-                    return RedirectToPage("/Admin/Index");
+                    if (User.IsInRole("Admin"))
+                    {
+                        return RedirectToPage("/Admin/Index");
+                    }
+                    else
+                    {
+                        return RedirectToPage("/Menu");
+                    }
                 }
                 else
                 {

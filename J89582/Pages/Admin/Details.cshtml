@@ -4,7 +4,8 @@
 @{
     ViewData["Title"] = "Details";
 }
-
+<link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+<div class="details">
 <h1>Details</h1>
 
 <div>
@@ -25,7 +26,8 @@
         </dd>
     </dl>
 </div>
-<div>
+<div class="edit-links">
     <a asp-page="./Edit" asp-route-id="@Model.Menu?.ID">Edit</a> |
     <a asp-page="./Index">Back to List</a>
+</div>
 </div>

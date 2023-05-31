@@ -1,13 +1,20 @@
-﻿body {
-}
+﻿
+/*css form login and register*/
 
-.login{
+.login-container { 
     position: relative;
-    top: 170px;
+    top: 200px;
     left: 50px;
     width: 200px;
 }
 
 button{
     margin: 10px 0 0 0;
+}
+
+.register-form {
+    position: relative;
+    top: 200px;
+    left: 50px;
+    width: 200px;
 }

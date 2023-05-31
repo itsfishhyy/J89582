@@ -1,17 +1,19 @@
 ﻿
-/*body{
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    min-height: 100%;
+    background-image: url('../img/background.png');
 }
-*/
-.container{
-    width: 80%;
+
+.contactpage {
+    position: relative;
+    top: 20vh;
+}
+
+.contact-container {
+    width: 100%;
     background: #fff;
     border-radius: 6px;
-    padding : 20px 60px 40px 40px;
+    padding: 20px 60px 40px 40px;
 }
 
 .map{
@@ -52,7 +54,7 @@
     position: absolute;
     height: 70%;
     width: 2px;
-    right: 143vmin;
+    right: 1050px;
     top: 50%;
     transform: translateY(-50%);
     background: #afafb6;
@@ -63,7 +65,7 @@
     position: absolute;
     height: 70%;
     width: 2px;
-    right: 102vmin;
+    right: 690px;
     top: 50%;
     transform: translateY(-50%);
     background: #afafb6;

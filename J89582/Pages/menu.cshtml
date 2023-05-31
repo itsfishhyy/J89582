@@ -7,38 +7,28 @@
 <link rel="stylesheet" href="~/css/Menu.css" asp-append-version="true" />
 
 
-<section class="menu">
-    <table class="table">
+<div class="menu">
+    <div class="title">
+        <h2> Our Menu </h2>
+    </div>
 
-        <tr>
-            @foreach (var item in Model.Menu)
-            {
-                var imagePath = @"img\" + item.ID + ".png";
-            
-            <td>
-                <img class="admin-image" src="@imagePath">
-                </td>
-            }
-        </tr>
+    <div class="table-menu">
+        <table class="table">
+        
+            <tbody>
+                @foreach (var item in Model.Menu)
+                { var imagePath = @"img\" + item.ID + ".png";
+                    <tr>
+               
+                        <td> @Html.DisplayFor(modelItem => item.MenuName) </td>
+                        <td> $@Html.DisplayFor(modelItem => item.Price) </td>
+                        <td class="img">
+                        <img class="menu-img" src="@imagePath">
+                        </td>
+                    </tr>
+                }
+            </tbody>
 
-            <tr>
-
-            @foreach (var item in Model.Menu)
-            {
-                <td>
-                    @Html.DisplayFor(modelItem => item.MenuName)
-                </td>
-            }
-        </tr>
-        <tr>
- 
-            @foreach (var item in Model.Menu)
-            {
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-            }
-                
-            </tr>
         </table>
-</section>
+    </div>
+</div>

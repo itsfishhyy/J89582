@@ -2,9 +2,11 @@
 @model J89582.Pages.Account.registerModel
 @{
     ViewData["Title"] = "Register";
-
 }
 
+<link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
+
+<div class="register-form">
 <h1>Register</h1>
 <form method="post">
     <h4>Create a new account.</h4>
@@ -27,3 +29,4 @@
     </div>
     <button type="submit">Register</button>
 </form>
+</div>

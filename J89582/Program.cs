@@ -21,7 +21,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = new PathString("/Account/Login");
-    //options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+    options.AccessDeniedPath = new PathString("/Account/AccessDenied");
     options.LogoutPath = new PathString("/Index");
 });
 
@@ -34,7 +34,7 @@ builder.Services.AddAuthorization(options =>
 
 builder.Services.AddRazorPages(options =>
 {
-    options.Conventions.AuthorizeFolder("/Menus", "AdminPolicy");
+    options.Conventions.AuthorizeFolder("/Admin", "AdminPolicy");
 });
 
 var app = builder.Build();

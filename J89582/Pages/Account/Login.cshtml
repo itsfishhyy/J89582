@@ -7,8 +7,10 @@
 
 <link rel="stylesheet" href="~/css/Login.css" asp-append-version="true" />
 
-<section class="login">
+<div class="login-container">
 <h2>Login</h2>
+        <a asp-page="/Account/register">Register</a>
+
 <form method="post">
     <h4>Use a local account to log in.</h4>
     <hr />
@@ -24,7 +26,7 @@
         <span asp-validation-for="Input.Password"></span>
     </div>
     <div>
-        <button type="submit">Log in</button>
+        <button  type="submit">Log in</button>
     </div>
 </form>
-</section>
+</div>

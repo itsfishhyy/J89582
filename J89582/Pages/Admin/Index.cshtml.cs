@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace J89582.Pages.Admin
 {
-
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly J89582.Data.J89582Context _context;

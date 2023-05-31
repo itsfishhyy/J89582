@@ -5,13 +5,13 @@
     ViewData["Title"] = "Edit";
 }
 
-<link rel="stylesheet" href="css/site.css" asp-append-version="true" />
-<section class="edit-page">
+<link rel="stylesheet" href="css/adminPage.css" asp-append-version="true"/>
+
+<div class="edit-page">
 
 <h1>Edit</h1>
 
 <h4>Menu</h4>
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
@@ -42,4 +42,4 @@
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
 
-                </section>
+</div>                

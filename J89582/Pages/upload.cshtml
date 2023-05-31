@@ -4,8 +4,8 @@
     ViewData["Title"] = "Upload File";
 }
 
-<section class="upload">
-<div class="text-center">
+<div class="upload">
+<div>
     <h1>Upload File</h1>
 </div>
 
@@ -13,5 +13,5 @@
     <input asp-for="UploadedFile" />
     <input type="submit" />
 </form>
-
-</section>
+    <a asp-page="Admin/Index">Back to List</a>
+</div>
