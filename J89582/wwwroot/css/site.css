@@ -168,3 +168,15 @@ button:hover {
     text-decoration:none;
     color: white;
 }
+
+.checkout {
+    position: absolute;
+    top: 20vh;
+    height: 250px;
+    width: 50%;
+}
+
+.pay{
+    position:absolute;
+    top: 400px;
+}

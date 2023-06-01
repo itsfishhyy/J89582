@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using J89582.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace J89582.Pages.Account
 {
@@ -13,6 +14,11 @@ namespace J89582.Pages.Account
     {
         [BindProperty]
         public RegistrationModel Input { get; set; }
+
+        private J89582Context _db;
+        public CheckoutCust Customer = new CheckoutCust();
+        public Basket Basket = new Basket();
+
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -23,12 +29,14 @@ namespace J89582.Pages.Account
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             RoleManager<IdentityRole> roleManager,
-            ILogger<registerModel> logger)
+            ILogger<registerModel> logger,
+            J89582Context db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _logger = logger;
+            _db = db;
         }
         public async Task<IActionResult> OnPostAsync()
         {
@@ -48,7 +56,12 @@ namespace J89582.Pages.Account
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                   Task<IdentityResult> newUserRole = _userManager.AddToRoleAsync(user, "RegisteredUser");
+
+                    NewBasket();
+                    NewCustomer(Input.Email);
+                    await _db.SaveChangesAsync();
+
+                    Task<IdentityResult> newUserRole = _userManager.AddToRoleAsync(user, "RegisteredUser");
                     newUserRole.Wait();
                     return RedirectToPage("/Index");
                 }
@@ -59,5 +72,30 @@ namespace J89582.Pages.Account
             }
             return Page();
         }
+        public void NewBasket()
+        {
+            var currentBasket = _db.Baskets.FromSqlRaw("SELECT * From Baskets")
+                .OrderByDescending(b => b.BasketID)
+                .FirstOrDefault();
+            if (currentBasket == null)
+            {
+                Basket.BasketID = 1;
+            }
+            else
+            {
+                Basket.BasketID = currentBasket.BasketID + 1;
+            }
+
+            _db.Baskets.Add(Basket);
+        }
+
+        public void NewCustomer(string Email)
+        {
+            Customer.Email = Email;
+            Customer.BasketID = Basket.BasketID;
+            _db.CheckoutCust.Add(Customer);
+        }
     }
+
 }
+

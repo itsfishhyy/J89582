@@ -25,6 +25,14 @@
                         <td class="img">
                         <img class="menu-img" src="@imagePath">
                         </td>
+
+                        <td>
+                            <button type="submit" asp-page-handler="Buy"
+                                asp-route-itemID="@item.ID">
+                                Buy
+                            </button>
+                        </td>
+
                     </tr>
                 }
             </tbody>
